@@ -6,9 +6,5 @@ import Navigation from './src/Navigation/Navigation';
 import Home from './src/screens/Home';
 
 export default function App() {
-  return (
-    <NavigationContainer>
-      <Tabs />
-    </NavigationContainer>
-  );
+  return <Home />;
 }
