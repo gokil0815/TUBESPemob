@@ -1,3 +1,5 @@
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {TabActions} from '@react-navigation/native';
 import React from 'react';
 import {
   StatusBar,
