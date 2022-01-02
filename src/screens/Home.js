@@ -1,5 +1,3 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {TabActions} from '@react-navigation/native';
 import React from 'react';
 import {
   StatusBar,
@@ -12,7 +10,7 @@ import {
 import {Card} from 'react-native-shadow-cards';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
-export default function Home() {
+export default function Home({navigation}) {
   return (
     <View style={styles.Container}>
       <StatusBar
@@ -21,6 +19,7 @@ export default function Home() {
         translucent={true}
       />
       <View style={styles.persegi} />
+      <Text style={styles.Text1}>BaliTrip</Text>
       <TouchableHighlight style={styles.Circle}>
         <FontAwesome5 name={'user'} size={30} color="black" />
       </TouchableHighlight>
@@ -73,14 +72,22 @@ export default function Home() {
         </View>
       </Card>
       <View style={styles.Bottombar}>
-        <TouchableHighlight style={[styles.kotak, {marginTop: 20}]}>
+        <TouchableHighlight
+          style={[styles.kotak, {marginTop: 20}]}
+          onPress={() => navigation.navigate('Home')}>
           <FontAwesome5 name={'home'} size={30} color="black" />
         </TouchableHighlight>
-        <TouchableHighlight style={[styles.kotak, {marginTop: 20}]}>
+        <Card style={styles.shadow3}>
+          <TouchableHighlight
+            style={styles.Circle2}
+            onPress={() => navigation.navigate('Scanqr')}>
+            <FontAwesome5 name={'camera'} size={40} color="white" />
+          </TouchableHighlight>
+        </Card>
+        <TouchableHighlight
+          style={[styles.kotak, {marginTop: 20}]}
+          onPress={() => navigation.navigate('Travellog')}>
           <FontAwesome5 name={'book'} size={30} color="black" />
-        </TouchableHighlight>
-        <TouchableHighlight style={[styles.kotak, {marginTop: 20}]}>
-          <FontAwesome5 name={'QR code'} size={30} color="black" />
         </TouchableHighlight>
       </View>
     </View>
@@ -135,6 +142,18 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     elevation: 15,
   },
+  shadow3: {
+    width: '17%',
+    height: '70%',
+    marginTop: -70,
+    borderRadius: 100,
+    alignSelf: 'center',
+    backgroundColor: '#12C039',
+    shadowColor: 'black',
+    shadowOffset: {height: 4, width: 0},
+    shadowOpacity: 1,
+    elevation: 15,
+  },
   Circle: {
     height: 50,
     width: 50,
@@ -144,6 +163,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#F1DBDB',
     alignItems: 'center',
     paddingTop: 8,
+  },
+  Circle2: {
+    height: 70,
+    width: 70,
+    borderRadius: 100,
+    marginTop: -5,
+    backgroundColor: '#12C039',
+    alignItems: 'center',
+    paddingTop: 13,
+    paddingLeft: 2,
   },
   Bottombar: {
     backgroundColor: '#12C039',
@@ -178,5 +207,13 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: 'white',
     textAlign: 'center',
+  },
+  Text1: {
+    fontFamily: 'Poppins-LightItalic',
+    fontSize: 40,
+    color: 'white',
+    position: 'absolute',
+    marginTop: 30,
+    marginLeft: 20,
   },
 });

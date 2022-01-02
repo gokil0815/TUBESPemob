@@ -37,7 +37,7 @@ export default function Login({navigation}) {
       />
       <TouchableHighlight
         style={styles.Tombol}
-        onPress={() => console.log(Username, Password)}>
+        onPress={() => navigation.navigate('Home')}>
         <Text style={styles.Text3}>Sign In</Text>
       </TouchableHighlight>
       <TouchableHighlight

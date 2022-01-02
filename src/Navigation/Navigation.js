@@ -7,6 +7,8 @@ import Login from '../screens/Login';
 import Register from '../screens/Register';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home';
+import Scanqr from '../screens/Scanqr';
+import Travellog from '../screens/Travellog';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -27,6 +29,16 @@ export default function Navigation() {
         <Stack.Screen
           name="Register"
           component={Register}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Scanqr"
+          component={Scanqr}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Travellog"
+          component={Travellog}
           options={{headerShown: false}}
         />
         <Stack.Screen

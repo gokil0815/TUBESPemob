@@ -1,10 +1,8 @@
-import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {Text, View} from 'react-native';
-import Tabs from './src/Navigation/BottomNavigation';
 import Navigation from './src/Navigation/Navigation';
-import Home from './src/screens/Home';
+import Scanqr from './src/screens/Scanqr';
 
 export default function App() {
-  return <Home />;
+  return <Scanqr />;
 }
