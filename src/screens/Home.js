@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Image,
   StatusBar,
   StyleSheet,
   Text,
@@ -20,9 +21,6 @@ export default function Home({navigation}) {
       />
       <View style={styles.persegi} />
       <Text style={styles.Text1}>BaliTrip</Text>
-      <TouchableHighlight style={styles.Circle}>
-        <FontAwesome5 name={'user'} size={30} color="black" />
-      </TouchableHighlight>
       <Card style={styles.shadow}>
         <TextInput style={styles.Input}>
           <FontAwesome5 name={'search'} size={30} color="black" />
@@ -33,47 +31,79 @@ export default function Home({navigation}) {
           <View style={styles.menubardalam}>
             <View style={styles.kotak}>
               <TouchableHighlight
-                style={[styles.Circle, {marginLeft: 5, marginTop: 5}]}>
-                <FontAwesome5 name={'hotel'} size={30} color="black" />
+                style={[
+                  styles.Circle,
+                  {marginLeft: 5, marginTop: 5, backgroundColor: '#4C7FBC'},
+                ]}
+                onPress={() => navigation.navigate('Hotel')}>
+                <FontAwesome5 name={'hotel'} size={30} color="white" />
               </TouchableHighlight>
               <Text style={styles.Text}>Hotels</Text>
             </View>
+            <View style={[styles.kotak, {width: 70}]}>
+              <TouchableHighlight
+                style={[
+                  styles.Circle,
+                  {marginLeft: 10, marginTop: 5, backgroundColor: '#F35959'},
+                ]}>
+                <FontAwesome5 name={'hospital'} size={30} color="white" />
+              </TouchableHighlight>
+              <Text style={styles.Text}>Hospital</Text>
+            </View>
             <View style={styles.kotak}>
               <TouchableHighlight
-                style={[styles.Circle, {marginLeft: 5, marginTop: 5}]}>
-                <FontAwesome5 name={'umbrella'} size={30} color="black" />
+                style={[
+                  styles.Circle,
+                  {marginLeft: 5, marginTop: 5, backgroundColor: '#59AFFF'},
+                ]}>
+                <Image source={require('../Image/beach.png')} />
               </TouchableHighlight>
               <Text style={styles.Text}>Beach</Text>
             </View>
             <View style={styles.kotak}>
               <TouchableHighlight
-                style={[styles.Circle, {marginLeft: 5, marginTop: 5}]}>
-                <FontAwesome5 name={''} size={30} color="black" />
+                style={[
+                  styles.Circle,
+                  {marginLeft: 5, marginTop: 5, backgroundColor: '#F27249'},
+                ]}>
+                <Image source={require('../Image/Vector.png')} />
               </TouchableHighlight>
               <Text style={styles.Text}>Food</Text>
             </View>
-            <View style={[styles.kotak, {width: 70}]}>
+          </View>
+          <View style={[styles.menubardalam, {justifyContent: 'flex-start'}]}>
+            <View style={[styles.kotak, {width: 70, marginLeft: 23}]}>
               <TouchableHighlight
-                style={[styles.Circle, {marginLeft: 10, marginTop: 5}]}>
-                <FontAwesome5 name={''} size={30} color="black" />
+                style={[
+                  styles.Circle,
+                  {
+                    marginLeft: 10,
+                    marginTop: 5,
+                    paddingTop: 10,
+                    backgroundColor: '#FFCA0C',
+                  },
+                ]}>
+                <Image source={require('../Image/suvernir.png')} />
               </TouchableHighlight>
               <Text style={styles.Text}>Souvenir</Text>
             </View>
-          </View>
-          <View style={[styles.menubardalam, {justifyContent: 'flex-start'}]}>
-            <View style={[styles.kotak, {width: 70, marginLeft: 20}]}>
+            <View style={[styles.kotak, {width: 79, marginLeft: 14}]}>
               <TouchableHighlight
-                style={[styles.Circle, {marginLeft: 10, marginTop: 5}]}>
-                <FontAwesome5 name={''} size={30} color="black" />
+                style={[
+                  styles.Circle,
+                  {marginLeft: 15, marginTop: 5, backgroundColor: '#FF1192'},
+                ]}
+                onPress={() => navigation.navigate('Travellog')}>
+                <FontAwesome5 name={'book'} size={30} color="white" />
               </TouchableHighlight>
-              <Text style={styles.Text}>Hospital</Text>
+              <Text style={styles.Text}>Travel Log</Text>
             </View>
           </View>
         </View>
       </Card>
       <View style={styles.Bottombar}>
         <TouchableHighlight
-          style={[styles.kotak, {marginTop: 20}]}
+          style={[styles.kotak, {marginTop: 20, backgroundColor: '#2C9637'}]}
           onPress={() => navigation.navigate('Home')}>
           <FontAwesome5 name={'home'} size={30} color="black" />
         </TouchableHighlight>
@@ -81,13 +111,16 @@ export default function Home({navigation}) {
           <TouchableHighlight
             style={styles.Circle2}
             onPress={() => navigation.navigate('Scanqr')}>
-            <FontAwesome5 name={'camera'} size={40} color="white" />
+            <Image
+              style={styles.Qrgambar}
+              source={require('../Image/qr.png')}
+            />
           </TouchableHighlight>
         </Card>
         <TouchableHighlight
-          style={[styles.kotak, {marginTop: 20}]}
-          onPress={() => navigation.navigate('Travellog')}>
-          <FontAwesome5 name={'book'} size={30} color="black" />
+          style={[styles.kotak, {marginTop: 20, backgroundColor: '#2C9637'}]}
+          onPress={() => navigation.navigate('account')}>
+          <FontAwesome5 name={'user'} size={30} color="black" />
         </TouchableHighlight>
       </View>
     </View>
@@ -100,7 +133,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   persegi: {
-    backgroundColor: '#12C039',
+    backgroundColor: '#2C9637',
     height: 120,
     width: 415,
   },
@@ -123,7 +156,7 @@ const styles = StyleSheet.create({
     width: '90%',
     height: '10%',
     borderRadius: 100,
-    marginTop: 18,
+    marginTop: -30,
     paddingTop: 10,
     marginLeft: 22,
     shadowColor: '#000000',
@@ -148,7 +181,7 @@ const styles = StyleSheet.create({
     marginTop: -70,
     borderRadius: 100,
     alignSelf: 'center',
-    backgroundColor: '#12C039',
+    backgroundColor: '#2C9637',
     shadowColor: 'black',
     shadowOffset: {height: 4, width: 0},
     shadowOpacity: 1,
@@ -169,13 +202,17 @@ const styles = StyleSheet.create({
     width: 70,
     borderRadius: 100,
     marginTop: -5,
-    backgroundColor: '#12C039',
+    backgroundColor: '#2C9637',
     alignItems: 'center',
-    paddingTop: 13,
+    paddingTop: 20,
     paddingLeft: 2,
   },
+  Qrgambar: {
+    width: 35,
+    height: 35,
+  },
   Bottombar: {
-    backgroundColor: '#12C039',
+    backgroundColor: '#2C9637',
     height: 100,
     width: 415,
     marginTop: 655,
@@ -213,7 +250,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     color: 'white',
     position: 'absolute',
-    marginTop: 30,
+    marginTop: 25,
     marginLeft: 20,
   },
 });

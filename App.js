@@ -4,5 +4,5 @@ import Navigation from './src/Navigation/Navigation';
 import Scanqr from './src/screens/Scanqr';
 
 export default function App() {
-  return <Scanqr />;
+  return <Navigation />;
 }

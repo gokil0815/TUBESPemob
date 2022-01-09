@@ -9,12 +9,27 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home';
 import Scanqr from '../screens/Scanqr';
 import Travellog from '../screens/Travellog';
+import BottomNavigation from './BottomNavigation';
+import account from '../screens/account';
+import Hotel from '../screens/Hotel';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
+
+const MyTheme = {
+  dark: false,
+  colors: {
+    primary: '#2C9637',
+    background: 'rgb(242, 242, 242)',
+    card: '#2C9637',
+    text: 'white',
+    border: 'rgb(199, 199, 204)',
+    notification: 'rgb(255, 69, 58)',
+  },
+};
 export default function Navigation() {
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={MyTheme}>
       <Stack.Navigator>
         <Stack.Screen
           name="Spalsh"
@@ -37,8 +52,8 @@ export default function Navigation() {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="Travellog"
-          component={Travellog}
+          name="account"
+          component={account}
           options={{headerShown: false}}
         />
         <Stack.Screen
@@ -46,6 +61,8 @@ export default function Navigation() {
           component={Home}
           options={{headerShown: false}}
         />
+        <Stack.Screen name="Travellog" component={Travellog} />
+        <Stack.Screen name="Hotel" component={Hotel} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -20,20 +20,13 @@ export default function Scanqr({navigation}) {
       />
       <View style={styles.persegi} />
       <Text style={styles.Text1}>BaliTrip</Text>
-      <Text
-        style={[styles.Text1, {marginTop: 77, marginLeft: 65, fontSize: 20}]}>
-        Scan QR Code
-      </Text>
-      <Card style={styles.shadow}>
-        <View style={styles.Qrcode}></View>
-      </Card>
       <View style={styles.Bottombar}>
         <TouchableHighlight
           style={[styles.kotak, {marginTop: 20}]}
           onPress={() => navigation.navigate('Home')}>
           <FontAwesome5 name={'home'} size={30} color="black" />
         </TouchableHighlight>
-        <Card style={styles.shadow2}>
+        <Card style={styles.shadow3}>
           <TouchableHighlight
             style={styles.Circle2}
             onPress={() => navigation.navigate('Scanqr')}>
@@ -56,18 +49,12 @@ export default function Scanqr({navigation}) {
 const styles = StyleSheet.create({
   Container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
   },
   persegi: {
     backgroundColor: '#2C9637',
     height: 120,
     width: 415,
-  },
-  Qrcode: {
-    backgroundColor: 'white',
-    height: 400,
-    width: 350,
-    alignSelf: 'center',
   },
   Circle: {
     height: 50,
@@ -93,20 +80,7 @@ const styles = StyleSheet.create({
     width: 60,
     marginLeft: 10,
   },
-  shadow: {
-    width: '86%',
-    height: '56%',
-    backgroundColor: 'red',
-    shadowColor: 'black',
-    shadowOffset: {height: 4, width: 0},
-    shadowOpacity: 1,
-    elevation: 15,
-    paddingTop: 3,
-    position: 'absolute',
-    alignSelf: 'center',
-    marginTop: 180,
-  },
-  shadow2: {
+  shadow3: {
     width: '17%',
     height: '70%',
     marginTop: -70,
