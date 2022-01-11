@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import Navigation from './src/Navigation/Navigation';
-import Scanqr from './src/screens/Scanqr';
+import Hotel from './src/screens/Hotel';
 
 export default function App() {
-  return <Navigation />;
+  return <Hotel />;
 }

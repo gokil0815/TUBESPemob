@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "856398307420",
+    "project_id": "tubes-pemo",
+    "storage_bucket": "tubes-pemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856398307420:android:315d6ffd250117b65dc699",
+        "android_client_info": {
+          "package_name": "com.tubes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856398307420-u6kcv4ej0bmnqklk17rd4vt1ruoknl0g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKemOqYfC6tGiZEjGLFktdQnUgistVeL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856398307420-u6kcv4ej0bmnqklk17rd4vt1ruoknl0g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
