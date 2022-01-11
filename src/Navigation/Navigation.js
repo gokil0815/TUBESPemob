@@ -14,6 +14,8 @@ import account from "../screens/account";
 import Hotel from "../screens/Hotel";
 import auth from "@react-native-firebase/auth";
 import Beach from '../screens/Beach';
+import Souvernir from '../screens/Souvernir';
+import Food from '../screens/Food';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -75,6 +77,8 @@ function HomeScreen() {
       <HomeStack.Screen name="Travellog" component={Travellog} />
       <HomeStack.Screen name="Hotel" component={Hotel} />
       <HomeStack.Screen name="Beach" component={Beach} />
+      <HomeStack.Screen name="Souvernir" component={Souvernir} />
+      <HomeStack.Screen name="Food" component={Food} />
     </HomeStack.Navigator>
   );
 }
