@@ -12,6 +12,8 @@ import Travellog from '../screens/Travellog';
 import BottomNavigation from './BottomNavigation';
 import account from '../screens/account';
 import Hotel from '../screens/Hotel';
+import Hospital from '../screens/Hospital';
+import Beach from '../screens/Beach';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -63,6 +65,8 @@ export default function Navigation() {
         />
         <Stack.Screen name="Travellog" component={Travellog} />
         <Stack.Screen name="Hotel" component={Hotel} />
+        <Stack.Screen name="Hospital" component={Hospital} />
+        <Stack.Screen name="Beach" component={Beach} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -2,16 +2,16 @@ import React from 'react';
 import {StyleSheet, Text, TouchableHighlight, View} from 'react-native';
 import {Card} from 'react-native-shadow-cards';
 
-export default function Hotel() {
+export default function Beach() {
   return (
     <View style={styles.Container}>
       <Card style={styles.Shadow1}>
         <View style={styles.Filter}>
           <TouchableHighlight style={styles.FilterDalam}>
-            <Text style={styles.Text1}>All Hotels</Text>
+            <Text style={styles.Text1}>All Beach</Text>
           </TouchableHighlight>
           <TouchableHighlight style={styles.FilterDalam}>
-            <Text style={styles.Text1}>Best Seller</Text>
+            <Text style={styles.Text1}>Favorite</Text>
           </TouchableHighlight>
           <TouchableHighlight
             style={[styles.FilterDalam, {borderRightWidth: 0}]}>
