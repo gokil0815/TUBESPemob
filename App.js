@@ -4,5 +4,5 @@ import Navigation from './src/Navigation/Navigation';
 import Hotel from './src/screens/Hotel';
 
 export default function App() {
-  return <Hotel />;
+  return <Navigation />;
 }

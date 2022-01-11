@@ -2,16 +2,13 @@ import React from 'react';
 import {StyleSheet, Text, TouchableHighlight, View} from 'react-native';
 import {Card} from 'react-native-shadow-cards';
 
-export default function Hotel() {
+export default function Hospital() {
   return (
     <View style={styles.Container}>
       <Card style={styles.Shadow1}>
         <View style={styles.Filter}>
           <TouchableHighlight style={styles.FilterDalam}>
-            <Text style={styles.Text1}>All Hotels</Text>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.FilterDalam}>
-            <Text style={styles.Text1}>Best Seller</Text>
+            <Text style={styles.Text1}>All Hospital</Text>
           </TouchableHighlight>
           <TouchableHighlight
             style={[styles.FilterDalam, {borderRightWidth: 0}]}>
@@ -40,7 +37,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   FilterDalam: {
-    width: 135,
+    width: 200,
     height: 35,
     backgroundColor: '#12C039',
     borderRightWidth: 2,
