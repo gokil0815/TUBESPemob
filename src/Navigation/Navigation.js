@@ -13,6 +13,7 @@ import BottomNavigation from "./BottomNavigation";
 import account from "../screens/account";
 import Hotel from "../screens/Hotel";
 import auth from "@react-native-firebase/auth";
+import Beach from '../screens/Beach';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -73,6 +74,7 @@ function HomeScreen() {
       />
       <HomeStack.Screen name="Travellog" component={Travellog} />
       <HomeStack.Screen name="Hotel" component={Hotel} />
+      <HomeStack.Screen name="Beach" component={Beach} />
     </HomeStack.Navigator>
   );
 }

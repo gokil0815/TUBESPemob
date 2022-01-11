@@ -45,7 +45,8 @@ export default function Home({navigation}) {
                 style={[
                   styles.Circle,
                   {marginLeft: 10, marginTop: 5, backgroundColor: '#F35959'},
-                ]}>
+                ]}
+                onPress={() => navigation.navigate('Hospital')}>
                 <FontAwesome5 name={'hospital'} size={30} color="white" />
               </TouchableHighlight>
               <Text style={styles.Text}>Hospital</Text>
@@ -55,7 +56,8 @@ export default function Home({navigation}) {
                 style={[
                   styles.Circle,
                   {marginLeft: 5, marginTop: 5, backgroundColor: '#59AFFF'},
-                ]}>
+                ]}
+                onPress={() => navigation.navigate('Beach')}>
                 <Image source={require('../Image/beach.png')} />
               </TouchableHighlight>
               <Text style={styles.Text}>Beach</Text>
