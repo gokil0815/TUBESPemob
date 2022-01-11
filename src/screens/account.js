@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import {Card} from 'react-native-shadow-cards';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import auth from '@react-native-firebase/auth';
 
 export default function Scanqr({navigation}) {
   return (
@@ -20,6 +21,34 @@ export default function Scanqr({navigation}) {
       />
       <View style={styles.persegi} />
       <Text style={styles.Text1}>BaliTrip</Text>
+      <TouchableHighlight style={[styles.Tombol, {borderTopWidth: 0}]}>
+        <View style={styles.Tombol}>
+          <Text style={styles.Text2}>Account</Text>
+        </View>
+      </TouchableHighlight>
+      <TouchableHighlight style={styles.Tombol}>
+        <View style={styles.Tombol}>
+          <Text style={styles.Text2}>Security</Text>
+        </View>
+      </TouchableHighlight>
+      <TouchableHighlight style={styles.Tombol}>
+        <View style={styles.Tombol}>
+          <Text style={styles.Text2}>Settings</Text>
+        </View>
+      </TouchableHighlight>
+      <TouchableHighlight
+        style={styles.Tombol}
+        onPress={() => {
+          auth()
+            .signOut()
+            .then(() => {
+              console.log('User log out!');
+            });
+        }}>
+        <View style={[styles.Tombol, {borderBottomWidth: 2}]}>
+          <Text style={styles.Text2}>Logout</Text>
+        </View>
+      </TouchableHighlight>
       <View style={styles.Bottombar}>
         <TouchableHighlight
           style={[styles.kotak, {marginTop: 20}]}
@@ -56,6 +85,13 @@ const styles = StyleSheet.create({
     height: 120,
     width: 415,
   },
+  Tombol: {
+    height: 60,
+    width: 411,
+    backgroundColor: 'white',
+    borderTopWidth: 0.3,
+    marginTop: 5,
+  },
   Circle: {
     height: 50,
     width: 50,
@@ -65,6 +101,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#F1DBDB',
     alignItems: 'center',
     paddingTop: 8,
+  },
+  Text2: {
+    fontFamily: 'Poppins-Medium',
+    color: 'black',
+    fontSize: 25,
+    marginLeft: 10,
+    marginTop: 8,
   },
   Text1: {
     fontFamily: 'Poppins-LightItalic',

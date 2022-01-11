@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     borderRadius: 200,
     marginLeft: -100,
     marginTop: -100,
-    backgroundColor: '#12C039',
+    backgroundColor: '#159622',
   },
   Gambar: {
     marginLeft: 75,
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     width: 341,
     height: 55,
     backgroundColor: '#12C039',
-    marginTop: 40,
+    marginTop: 80,
     alignSelf: 'center',
     justifyContent: 'center',
   },
