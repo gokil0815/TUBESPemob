@@ -14,6 +14,8 @@ import account from '../screens/account';
 import Hotel from '../screens/Hotel';
 import Hospital from '../screens/Hospital';
 import Beach from '../screens/Beach';
+import Souvernir from '../screens/Souvernir';
+import Food from '../screens/Food';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -67,6 +69,8 @@ export default function Navigation() {
         <Stack.Screen name="Hotel" component={Hotel} />
         <Stack.Screen name="Hospital" component={Hospital} />
         <Stack.Screen name="Beach" component={Beach} />
+        <Stack.Screen name="Souvernir" component={Souvernir} />
+        <Stack.Screen name="Food" component={Food} />
       </Stack.Navigator>
     </NavigationContainer>
   );

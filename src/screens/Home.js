@@ -67,7 +67,8 @@ export default function Home({navigation}) {
                 style={[
                   styles.Circle,
                   {marginLeft: 5, marginTop: 5, backgroundColor: '#F27249'},
-                ]}>
+                ]}
+                onPress={() => navigation.navigate('Food')}>
                 <Image source={require('../Image/Vector.png')} />
               </TouchableHighlight>
               <Text style={styles.Text}>Food</Text>
@@ -84,7 +85,8 @@ export default function Home({navigation}) {
                     paddingTop: 10,
                     backgroundColor: '#FFCA0C',
                   },
-                ]}>
+                ]}
+                onPress={() => navigation.navigate('Souvernir')}>
                 <Image source={require('../Image/suvernir.png')} />
               </TouchableHighlight>
               <Text style={styles.Text}>Souvenir</Text>
